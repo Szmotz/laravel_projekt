@@ -11,7 +11,16 @@ class ProductsController extends Controller
    */
    public function index()
    {
-   		$products = Product::latest()->get();
+   	
+   		$products = Product::latest()->where('view', '1')->get();
    		return view('products.index')->with('products',$products);
+   }
+   /**
+    * Jeden produkt
+    */
+   public function show($id)
+   {
+   	$product = Product::findOrFail($id);
+   	 return view('products.show')->with('product',$product);
    }
 }

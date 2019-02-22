@@ -48,7 +48,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="">Start</a></li>
-                    <li><a href="articles.html">Produkty</a></li>
+                    <li><a href="/products">Produkty</a></li>
                     <li><a href="/contact">Kontakt</a></li>
                     <li><a href="/about">O nas</a></li>
                 </ul>
