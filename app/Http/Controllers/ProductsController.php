@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use Request;
 
-use Illuminate\Http\Request;
 use App\Product;
+use App\Http\Requests\CreateProductRequest;
 class ProductsController extends Controller
 {
    /*
@@ -29,5 +30,14 @@ class ProductsController extends Controller
    public function create()
    {
       return view('products.create');
+   }
+   /**
+    * Zapisuje nowy produkt do bazy 
+    * Tylko Admin!!!!!! To ustawia sie w CreateProductRequest
+    */
+   public function store(CreateProductRequest $request)
+   {
+      Product::create($request->all());
+      return redirect('products');
    }
 }
