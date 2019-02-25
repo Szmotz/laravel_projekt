@@ -34,7 +34,7 @@
                     <div class="form-group">
                         <div class="col-md-4 control-label">{!! Form::label('img', 'Adres grafiki:' ) !!}</div>
                         <div class="col-md-6">
-                            {!! Form::text('img', null, ['class'=>'form-control']) !!}
+                            {!! Form::file('img',['class'=>'form-control']) !!}
                         </div>
                     </div>
 
@@ -55,7 +55,7 @@
                       <div class="form-group">
                         <div class="col-md-4 control-label">{!! Form::label('view', 'View:' ) !!}</div>
                         <div class="col-md-6">
-                            {!! Form::radio('view', 1, false, ['class'=>'form-control']) !!}
+                            {!! Form::checkbox('view', 1, true, ['class'=>'form-control']) !!}
                         </div>
                     </div> 
 
