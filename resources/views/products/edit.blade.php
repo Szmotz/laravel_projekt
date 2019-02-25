@@ -7,7 +7,7 @@
             <!-- Formularz -->
             	@include('products.form_errors')
 
-            	{!! Form::open(['url'=>'products','class'=>'form-horizontal']) !!}
+            	{!! Form::model($product, ['method'=>'PATCH', 'class'=>'form-horiontal', 'action'=>['ProductsController@update',$product->id]]) !!}
 
             		@include('products.form')
 

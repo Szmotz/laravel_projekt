@@ -40,4 +40,23 @@ class ProductsController extends Controller
       Product::create($request->all());
       return redirect('products');
    }
+   /**
+    * Formularz edycji Produktu 
+    * Tylko Admin!!! 
+    */
+   public function edit($id)
+   {
+      $product = Product::findOrFail($id);
+      return view('products.edit')->with('product' , $product);
+   }
+
+   /**
+    * Aktualizacja Produktu
+    */
+   public function update($id, CreateProductRequest $request)
+   {
+      $product = Product::findOrFail($id);
+      $product->update($request->all());
+      return redirect('products');
+   }
 }

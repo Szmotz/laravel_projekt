@@ -15,14 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contact', 'PagesController@contact');
-Route::get('/about', 'PagesController@about');
-
-Route::get('/products', 'ProductsController@index');
-Route::post('/products', 'ProductsController@store');
-Route::get('/products/create', 'ProductsController@create');
-Route::get('/products/{id}', 'ProductsController@show');
-
-
+Route::resource('products','ProductsController');
 
 
