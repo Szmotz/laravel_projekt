@@ -9,15 +9,16 @@ class ComposerStaticInitf40a6181499308774a0aaa19f56c62f2
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
-        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -94,11 +95,14 @@ class ComposerStaticInitf40a6181499308774a0aaa19f56c62f2
             'Dotenv\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Common\\Inflector\\' => 26,
+            'Doctrine\\Common\\Annotations\\' => 28,
             'DeepCopy\\' => 9,
         ),
         'C' => 
         array (
             'Cron\\' => 5,
+            'Collective\\Html\\' => 16,
+            'Collective\\Annotations\\' => 23,
         ),
         'A' => 
         array (
@@ -249,6 +253,10 @@ class ComposerStaticInitf40a6181499308774a0aaa19f56c62f2
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
         ),
+        'Doctrine\\Common\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
+        ),
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
@@ -256,6 +264,14 @@ class ComposerStaticInitf40a6181499308774a0aaa19f56c62f2
         'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron',
+        ),
+        'Collective\\Html\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravelcollective/html/src',
+        ),
+        'Collective\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravelcollective/annotations/src',
         ),
         'App\\' => 
         array (
@@ -286,6 +302,13 @@ class ComposerStaticInitf40a6181499308774a0aaa19f56c62f2
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
             ),
         ),
+        'D' => 
+        array (
+            'Doctrine\\Common\\Lexer\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
+            ),
+        ),
     );
 
     public static $classMap = array (
@@ -297,11 +320,14 @@ class ComposerStaticInitf40a6181499308774a0aaa19f56c62f2
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PagesController.php',
+        'App\\Http\\Controllers\\ProductsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductsController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Product' => __DIR__ . '/../..' . '/app/Product.php',
+        'App\\Providers\\AnnotationsServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AnnotationsServiceProvider.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -316,6 +342,49 @@ class ComposerStaticInitf40a6181499308774a0aaa19f56c62f2
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'Carbon\\Laravel\\ServiceProvider' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Laravel/ServiceProvider.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'Collective\\Annotations\\AnnotationFinder' => __DIR__ . '/..' . '/laravelcollective/annotations/src/AnnotationFinder.php',
+        'Collective\\Annotations\\AnnotationScanner' => __DIR__ . '/..' . '/laravelcollective/annotations/src/AnnotationScanner.php',
+        'Collective\\Annotations\\AnnotationsServiceProvider' => __DIR__ . '/..' . '/laravelcollective/annotations/src/AnnotationsServiceProvider.php',
+        'Collective\\Annotations\\Console\\EventScanCommand' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Console/EventScanCommand.php',
+        'Collective\\Annotations\\Console\\ModelScanCommand' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Console/ModelScanCommand.php',
+        'Collective\\Annotations\\Console\\RouteScanCommand' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Console/RouteScanCommand.php',
+        'Collective\\Annotations\\Database\\Eloquent\\Annotations\\Annotations\\Bind' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Database/Eloquent/Annotations/Annotations/Bind.php',
+        'Collective\\Annotations\\Database\\Eloquent\\Annotations\\InvalidBindingResolverException' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Database/Eloquent/Annotations/InvalidBindingResolverException.php',
+        'Collective\\Annotations\\Database\\Eloquent\\Annotations\\Scanner' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Database/Eloquent/Annotations/Scanner.php',
+        'Collective\\Annotations\\Events\\Annotations\\Annotations\\Hears' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Events/Annotations/Annotations/Hears.php',
+        'Collective\\Annotations\\Events\\Annotations\\Scanner' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Events/Annotations/Scanner.php',
+        'Collective\\Annotations\\Filesystem\\ClassFinder' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Filesystem/ClassFinder.php',
+        'Collective\\Annotations\\NamespaceToPathConverterTrait' => __DIR__ . '/..' . '/laravelcollective/annotations/src/NamespaceToPathConverterTrait.php',
+        'Collective\\Annotations\\Routing\\Annotations\\AbstractPath' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/AbstractPath.php',
+        'Collective\\Annotations\\Routing\\Annotations\\AnnotationSet' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/AnnotationSet.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Annotations\\Annotation' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Annotations/Annotation.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Annotations\\Any' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Annotations/Any.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Annotations\\Controller' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Annotations/Controller.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Annotations\\Delete' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Annotations/Delete.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Annotations\\Get' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Annotations/Get.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Annotations\\Middleware' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Annotations/Middleware.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Annotations\\Options' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Annotations/Options.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Annotations\\Patch' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Annotations/Patch.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Annotations\\Post' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Annotations/Post.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Annotations\\Put' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Annotations/Put.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Annotations\\Resource' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Annotations/Resource.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Annotations\\Route' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Annotations/Route.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Annotations\\Where' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Annotations/Where.php',
+        'Collective\\Annotations\\Routing\\Annotations\\EndpointCollection' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/EndpointCollection.php',
+        'Collective\\Annotations\\Routing\\Annotations\\EndpointInterface' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/EndpointInterface.php',
+        'Collective\\Annotations\\Routing\\Annotations\\EndpointTrait' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/EndpointTrait.php',
+        'Collective\\Annotations\\Routing\\Annotations\\MethodEndpoint' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/MethodEndpoint.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Path' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Path.php',
+        'Collective\\Annotations\\Routing\\Annotations\\ResourceEndpoint' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/ResourceEndpoint.php',
+        'Collective\\Annotations\\Routing\\Annotations\\ResourcePath' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/ResourcePath.php',
+        'Collective\\Annotations\\Routing\\Annotations\\Scanner' => __DIR__ . '/..' . '/laravelcollective/annotations/src/Routing/Annotations/Scanner.php',
+        'Collective\\Html\\Componentable' => __DIR__ . '/..' . '/laravelcollective/html/src/Componentable.php',
+        'Collective\\Html\\Eloquent\\FormAccessible' => __DIR__ . '/..' . '/laravelcollective/html/src/Eloquent/FormAccessible.php',
+        'Collective\\Html\\FormBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/FormBuilder.php',
+        'Collective\\Html\\FormFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/FormFacade.php',
+        'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
+        'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
+        'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateProductsTable' => __DIR__ . '/../..' . '/database/migrations/2019_02_21_224511_create_products_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
@@ -354,7 +423,27 @@ class ComposerStaticInitf40a6181499308774a0aaa19f56c62f2
         'DeepCopy\\TypeFilter\\TypeFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/TypeFilter.php',
         'DeepCopy\\TypeMatcher\\TypeMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeMatcher/TypeMatcher.php',
         'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+        'Doctrine\\Common\\Annotations\\Annotation' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation.php',
+        'Doctrine\\Common\\Annotations\\AnnotationException' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php',
+        'Doctrine\\Common\\Annotations\\AnnotationReader' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php',
+        'Doctrine\\Common\\Annotations\\AnnotationRegistry' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationRegistry.php',
+        'Doctrine\\Common\\Annotations\\Annotation\\Attribute' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Attribute.php',
+        'Doctrine\\Common\\Annotations\\Annotation\\Attributes' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Attributes.php',
+        'Doctrine\\Common\\Annotations\\Annotation\\Enum' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Enum.php',
+        'Doctrine\\Common\\Annotations\\Annotation\\IgnoreAnnotation' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/IgnoreAnnotation.php',
+        'Doctrine\\Common\\Annotations\\Annotation\\Required' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Required.php',
+        'Doctrine\\Common\\Annotations\\Annotation\\Target' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation/Target.php',
+        'Doctrine\\Common\\Annotations\\CachedReader' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/CachedReader.php',
+        'Doctrine\\Common\\Annotations\\DocLexer' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/DocLexer.php',
+        'Doctrine\\Common\\Annotations\\DocParser' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+        'Doctrine\\Common\\Annotations\\FileCacheReader' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/FileCacheReader.php',
+        'Doctrine\\Common\\Annotations\\IndexedReader' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/IndexedReader.php',
+        'Doctrine\\Common\\Annotations\\PhpParser' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/PhpParser.php',
+        'Doctrine\\Common\\Annotations\\Reader' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/Reader.php',
+        'Doctrine\\Common\\Annotations\\SimpleAnnotationReader' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/SimpleAnnotationReader.php',
+        'Doctrine\\Common\\Annotations\\TokenParser' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/TokenParser.php',
         'Doctrine\\Common\\Inflector\\Inflector' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php',
+        'Doctrine\\Common\\Lexer\\AbstractLexer' => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer/AbstractLexer.php',
         'Doctrine\\Instantiator\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator/Exception/ExceptionInterface.php',
         'Doctrine\\Instantiator\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator/Exception/InvalidArgumentException.php',
         'Doctrine\\Instantiator\\Exception\\UnexpectedValueException' => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator/Exception/UnexpectedValueException.php',

@@ -23,4 +23,11 @@ class ProductsController extends Controller
    	$product = Product::findOrFail($id);
    	 return view('products.show')->with('product',$product);
    }
+   /**
+    * Wyświetla formularz dodawania produktu
+    */
+   public function create()
+   {
+      return view('products.create');
+   }
 }
