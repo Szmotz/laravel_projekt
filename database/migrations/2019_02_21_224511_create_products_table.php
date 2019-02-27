@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->text('img');
             $table->integer('price');
             $table->integer('ilosc');
-            $table->integer('view');
+            $table->integer('view')->default('0');
             $table->text('description');
             $table->timestamps();
         });

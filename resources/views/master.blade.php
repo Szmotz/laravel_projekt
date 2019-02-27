@@ -56,8 +56,20 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                        <li><a href="login.html">Zaloguj</a></li>
-                        <li><a href="">Rejestracja</a></li>
+                    @if (Route::has('login'))
+               
+                    @if (Auth::check())
+                        <li><a href="{{ url('/logout') }}">Logout</a></li>
+                    @else
+                        <li><a href="{{ url('/login') }}">Zaloguj</a></li>
+                       <li> <a href="{{ url('/register') }}">Rejestruj</a></li>
+                    @endif
+               
+            @endif
+                        {{-- <li><a href="/login">Zaloguj</a></li>
+                        <li><a href="/register">Rejestracja</a></li>
+                        <li><a href="/logout">Wyloguj</a></li> --}}
+
                 </ul>
             </div>
         </div>

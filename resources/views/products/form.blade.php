@@ -36,7 +36,7 @@
                       <div class="form-group">
                         <div class="col-md-4 control-label">{!! Form::label('view', 'View:' ) !!}</div>
                         <div class="col-md-6">
-                            {!! Form::checkbox('view', 1, true, ['class'=>'form-control']) !!}
+                            {!! Form::checkbox('view','true', ['class'=>'form-control']) !!}
                         </div>
                     </div> 
 

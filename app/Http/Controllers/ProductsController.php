@@ -47,7 +47,7 @@ class ProductsController extends Controller
    public function edit($id)
    {
       $product = Product::findOrFail($id);
-      return view('products.edit')->with('product' , $product);
+      return view('products.edit')->with('product', $product);
    }
 
    /**
@@ -59,4 +59,8 @@ class ProductsController extends Controller
       $product->update($request->all());
       return redirect('products');
    }
+   public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }
