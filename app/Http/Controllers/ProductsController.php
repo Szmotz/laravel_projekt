@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Request;
 
+use App\User;
 use App\Product;
 use App\Http\Requests\CreateProductRequest;
 class ProductsController extends Controller
@@ -12,7 +13,7 @@ class ProductsController extends Controller
    */
    public function index()
    {
-   	
+   	  
    		$products = Product::latest()->where('view', '1')->get();
    		return view('products.index')->with('products',$products);
    }
@@ -29,6 +30,7 @@ class ProductsController extends Controller
     */
    public function create()
    {
+      $product->boolean('view')->default(1);
       return view('products.create');
    }
    /**
@@ -46,6 +48,7 @@ class ProductsController extends Controller
     */
    public function edit($id)
    {
+      
       $product = Product::findOrFail($id);
       return view('products.edit')->with('product', $product);
    }
