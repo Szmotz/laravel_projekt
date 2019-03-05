@@ -47,10 +47,10 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="">Start</a></li>
+                    <li><a href="/startowa">Start</a></li>
                     <li><a href="/products">Produkty</a></li>
                     <li><a href="/contact">Kontakt</a></li>
-                    <li><a href="/about">O nas</a></li>
+                    
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -90,8 +90,8 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="container">
-            <p> Adrian Ochała Dawid Szmidt</p>
+        <div class="container text-center">
+            <p> Copyright by &copy; Adrian Ochała Dawid Szmidt</p>
         </div>
     </footer>
 

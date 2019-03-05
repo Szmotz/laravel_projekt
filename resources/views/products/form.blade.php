@@ -33,10 +33,23 @@
                         </div>
                     </div>
 
+                     {{--  <div class="form-group">
+                        <div class="col-md-4 control-label">{!! Form::label('view', 'View:' ) !!}</div>
+                        <div class="col-md-6">
+                            {!! Form::checkbox('view','boolean','true', ['class'=>'form-control']) !!}
+                        </div>
+                    </div>  --}}
+
+                <div class="form-group">
+                        <div class="col-md-4 control-label">{!! Form::label('view', 'View:' ) !!}</div>
+                        <div class="col-md-6">
+                            {!! Form::radio('view','1','false', ['class'=>'form-control']) !!}TAK
+                        </div>
+                    </div> 
                       <div class="form-group">
                         <div class="col-md-4 control-label">{!! Form::label('view', 'View:' ) !!}</div>
                         <div class="col-md-6">
-                            {!! Form::checkbox('view','true', ['class'=>'form-control']) !!}
+                            {!! Form::radio('view','0','false', ['class'=>'form-control']) !!}Nie
                         </div>
                     </div> 
 

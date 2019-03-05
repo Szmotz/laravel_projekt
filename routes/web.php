@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/contact', 'PagesController@contact');
-Route::get('/about', 'PagesController@about');
+Route::get('/startowa', 'PagesController@about');
 
 Route::resource('products','ProductsController');
 

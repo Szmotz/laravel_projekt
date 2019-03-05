@@ -28,8 +28,8 @@ class CreateProductRequest extends FormRequest
             'description' => 'required',
             'img' => 'required',
             'price' => 'required',
-            'ilosc' => 'required'
-             // 'view' => '0'
+            'ilosc' => 'required',
+             'view' => 'boolean'
         ];
     }
 }
