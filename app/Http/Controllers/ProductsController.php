@@ -6,8 +6,28 @@ use Request;
 use App\User;
 use App\Product;
 use App\Http\Requests\CreateProductRequest;
+use Illuminate\Support\Facades\Gate;
+
 class ProductsController extends Controller
 {
+  /**
+   * Sprawdza Czy Admin
+   */
+   public function admin()
+    {
+        if (Gate::allows('admin-only', Auth::user())){
+            return view('edit');
+        }
+        else{
+            return "Nie jesteś adminem";
+        }
+        if (Gate::allows('adminonly', Auth::user())){
+            return view('create');
+        }
+        else{
+            return "Nie jesteś adminem";
+        }
+    }
    /*
    *Pobieramy listę produktów
    */
@@ -30,7 +50,7 @@ class ProductsController extends Controller
     */
    public function create()
    {
-      $product->boolean('view')->default(1);
+      //$product->boolean('view')->default(1);
       return view('products.create');
    }
    /**
@@ -66,4 +86,5 @@ class ProductsController extends Controller
     {
         $this->middleware('auth');
     }
+
 }

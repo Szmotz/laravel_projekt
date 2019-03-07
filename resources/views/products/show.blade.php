@@ -30,10 +30,21 @@
                 <span class="upper-label">Cena: {{ $product->price }} ZŁ.</span>
                 
                 <div class="edit-button">
+                    
+                    @can('admin-only', Auth::user())
+                
+                 <a class="btn btn-primary btn-lg" href="{{ action('ProductsController@edit', $product->id) }}">
+                        Edytuj Produkt
+                    </a>    
+                @endcan
+              @cannot('admin-only',Auth::user())
                     <button class="btn btn-primary btn-lg">
                         Dodaj do koszyka
                     </button>
+                @endcannot
                 </div>
+
+                
             </div>
             
         </div>

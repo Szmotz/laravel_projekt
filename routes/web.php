@@ -13,13 +13,13 @@
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('admin', 'HomeController@admin');
+Route::get('/', 'PagesController@about');
 
 Route::get('/contact', 'PagesController@contact');
 Route::get('/startowa', 'PagesController@about');
 
 Route::resource('products','ProductsController');
+
 
 
