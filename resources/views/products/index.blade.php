@@ -6,7 +6,10 @@
                 
                  <a class="btn btn-primary btn-lg" href="{{ action('ProductsController@create') }}">
                         Dodaj Produkt
-                    </a>    
+                    </a>  
+                       <a class="btn btn-primary btn-lg" href="{{ action('AdminController@index') }}">
+                        Edytuj użytkownika
+                    </a> 
                 @endcan
 </div>
 <div class="row">

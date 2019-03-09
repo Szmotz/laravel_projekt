@@ -27,7 +27,7 @@
 
                 
 @cannot('admin-only', Auth::user())              
-
+@cannot('user-only', Auth::user())
 <div class="videos-header card text-center">
     <h4>Do korzystania z naszego sklepu wymagane jest konto:</h4>
 </div>
@@ -51,5 +51,5 @@
 </div>
    
 @endcannot 
- 
+ @endcannot
 @stop

@@ -8,6 +8,8 @@ use App\Product;
 use App\Http\Requests\CreateProductRequest;
 use Illuminate\Support\Facades\Gate;
 
+
+
 class ProductsController extends Controller
 {
   /**
@@ -28,6 +30,23 @@ class ProductsController extends Controller
             return "Nie jesteś adminem";
         }
     }
+    
+    /**
+     * Sprawdza Czy użytkownik 
+     */
+
+    public function useronly()
+    {
+      if (Gate::allows('user-only', Auth::user())) {
+        return 'działa';
+      }
+      else{
+        return 'Coś poszło nie tak';
+      }
+    }
+
+
+
    /*
    *Pobieramy listę produktów
    */
