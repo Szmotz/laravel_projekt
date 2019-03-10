@@ -59,6 +59,7 @@
                     @if (Route::has('login'))
                
                     @if (Auth::check())
+                    <li><a href="{{ url('/cart-show') }}">Twój koszyk</a></li>
                         <li><a href="{{ url('/logout') }}">Logout</a></li>
                     @else
                         <li><a href="{{ url('/login') }}">Zaloguj</a></li>

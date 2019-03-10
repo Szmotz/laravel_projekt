@@ -37,10 +37,22 @@
                         Edytuj Produkt
                     </a>    
                 @endcan
-              @cannot('admin-only',Auth::user())
-                    <button class="btn btn-primary btn-lg">
-                        Dodaj do koszyka
-                    </button>
+              @cannot('admin-only', Auth::user())
+                 {!! Form::open(['url' => '/cart-add', 'method'=>'POST']) !!}
+   <input type="hidden" name="productId" value="{{ $product->id }}">
+   <input type="hidden" name="qty" value="1">
+
+  
+  <button href="submit" class="btn btn-primary btn-lg"> Dodaj do koszyka</button>
+ 
+{!! Form::close() !!}
+
+{{-- nie działa --}}
+               {{--   <a class="btn btn-primary btn-lg" href="{{ action('ZamowienieController@edit', $product->id )}}">
+                    Dodaj do koszyka
+                 </a> --}}
+                    
+                        
                 @endcannot
                 </div>
 

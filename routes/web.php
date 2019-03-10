@@ -21,6 +21,15 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/startowa', 'PagesController@about');
 
 Route::resource('adminpages','AdminController');
+Route::resource('zamowienie','ZamowienieController');
 Route::resource('products','ProductsController');
 
+// koszyk
 
+Route::post('/cart-add', 'CartController@addToCart');
+Route::get('/cart-show', 'CartController@cartShow');
+Route::post('/update-cart', 'CartController@updateCart');
+Route::get('/delete-cart-product/{rowId}', 'CartController@removeCartProduct');
+
+
+// koniec koszyka
