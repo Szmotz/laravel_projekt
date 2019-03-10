@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
 
-
+@can('admin-only', Auth::user())
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -31,5 +31,5 @@
 
 
  	@endforeach
-
+@endcan
 @stop

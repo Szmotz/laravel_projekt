@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+@can('admin-only', Auth::user())
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
         <div class="card">
@@ -17,4 +18,5 @@
         </div>
     </div>
 </div>
+@endcan
 @stop

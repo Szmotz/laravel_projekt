@@ -1,6 +1,7 @@
 @extends('master')
 @section('content')
 @include('products.form_errors')
+@can('admin-only', Auth::user())
 {!! Form::model($user, ['method'=>'PATCH', 'class'=>'form-horiontal', 'action'=>['AdminController@update',$user->id]]) !!}
 
 	<div class="form-group">
@@ -39,5 +40,5 @@
                     </div>
 
 {!! Form::close() !!}
-
+@endcan
 @stop
