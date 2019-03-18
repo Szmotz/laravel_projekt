@@ -1,23 +1,6 @@
 @extends('master')
 @section('content')
-<div class="videos-header card">
-    <h2>Nasze produkty</h2>
-    <?!
-       	$jeden=1;
-    	$dwa=2;
-    ?>
-    @can('admin-only', Auth::user())
-                
-                 <a class="btn btn-primary btn-lg" href="{{ action('ProductsController@create') }}">
-                        Dodaj Produkt
-                    </a>  
-                       <a class="btn btn-primary btn-lg" href="{{ action('AdminController@index'), $request='1' }}">
-                        Edytuj użytkownika
-                    </a> 
-                       <a class="btn btn-primary btn-lg" href="{{ action('AdminController@indexDwa') }}">Wszystkie Produkty
-                 </a>
-                @endcan
-</div>
+
 <div class="row">
 
 				
@@ -50,4 +33,5 @@
     @endforeach
 
 </div>
+
 @stop

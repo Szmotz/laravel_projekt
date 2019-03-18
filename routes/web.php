@@ -20,6 +20,7 @@ Route::get('/', 'PagesController@about');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/startowa', 'PagesController@about');
 
+Route::get('/show','AdminController@indexDwa');
 Route::resource('adminpages','AdminController');
 Route::resource('zamowienie','ZamowienieController');
 Route::resource('products','ProductsController');
