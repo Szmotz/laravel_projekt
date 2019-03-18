@@ -3,34 +3,40 @@
 
 <div class="row">
 
-				
-	@foreach($products as $product)
-				
-	    <!-- Single video -->
-	    <div class="col-xs-12 col-md-6 col-lg-4 single-video">
 
-	        <div class="card">
-	        
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nazwa</th>
+      <th>Cena</th>
+      <th>Zedjęcie</th>
+      <th>Widoczność</th>
+      <th>Edycja</th>
+    </tr>
+  </thead>
 
 
-	            <div class="embed-responsive embed-responsive-16by9">
-	            	<a href="{{ url('products', $product->id) }}">
-	                <img src="{{ $product->img }}">
-	            </a>                                
-	            </div>
-	            <div class="card-content">
-	                <a href="{{ url('products', $product->id) }}">
-	                    <h4>{{ $product->name }}</h4>
-	                </a>
-	                <p> {{ $product->description }} </p>
-	                <span class="upper-label">Cena: {{ $product->price}} zł.</span>
-	                
-	            </div>
-	            
-	        </div>
-	    </div>
+ 
 
-    @endforeach
+  <tbody>
+ @foreach($products as $product)
+    <tr>
+      <td>{{$product->id}}</td>
+      <td>{{$product->name}}</td>
+      <td>{{$product->price}}</td>
+      <td>{{$product->img}}</td>
+      <td>{{$product->view}}</td>
+<td>
+     <a class="btn btn-primary btn-lg" href="{{ action('ProductsController@edit', $product->id) }}">
+                        Edytuj Produkt                </a></td>  
+    </tr>
+   
+ 	@endforeach
+  </tbody>
+</table>
+
+
 
 </div>
 
