@@ -27,8 +27,8 @@ class CartController extends Controller
     public function cartShow()
     {
     	$cartProducts = Cart::Content();
-
-    	return view('zamowienie.cart.showCart',['cartProducts'=>$cartProducts]);
+        
+    	return view('zamowienie.cart.cart-show',['cartProducts'=>$cartProducts]);
     }
 
     public function updateCart(Request $request)

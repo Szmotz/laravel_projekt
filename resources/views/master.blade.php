@@ -59,8 +59,10 @@
                     @if (Route::has('login'))
                
                     @if (Auth::check())
+                    @cannot('admin-only')
                     <li><a href="{{ url('/cart-show') }}">Twój koszyk</a></li>
-                        <li><a href="{{ url('/logout') }}">Logout</a></li>
+                    @endcannot
+                        <li><a href="{{ url('/logout') }} {!!Cart::destroy()!!}" >Logout</a></li>
                     @else
                         <li><a href="{{ url('/login') }}">Zaloguj</a></li>
                        <li> <a href="{{ url('/register') }}">Rejestruj</a></li>

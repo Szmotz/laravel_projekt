@@ -45,9 +45,11 @@ $total =0;
 			<?php
 				$total = $total+$subtotal;
 			?>
-
+		
 			
 @endforeach
+	
+
 <tr>
 	<td></td>
 	<td></td>

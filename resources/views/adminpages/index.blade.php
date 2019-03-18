@@ -5,17 +5,19 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>#</th>
+      <th>ID</th>
       <th>Imię</th>
       <th>email</th>
+      <th>rola</th>
+
     </tr>
   </thead>
-</table>
- @foreach($users as $user)
-<table class="table table-bordered">
+
+
  
 
-  <thead>
+  <tbody>
+ @foreach($users as $user)
     <tr>
       <td>{{$user->id}}</td>
       <td>{{$user->name}}</td>
@@ -26,10 +28,10 @@
                     </a> </td>
     </tr>
    
+ 	@endforeach
   </tbody>
 </table>
 
 
- 	@endforeach
 @endcan
 @stop
