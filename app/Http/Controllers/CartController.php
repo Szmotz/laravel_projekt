@@ -14,6 +14,7 @@ class CartController extends Controller
     	$productId = $request->productId;
 
     	$productById = 	Product::where('id',$productId)->first();
+        //$userById = User::where('id',$userId);
     	Cart::add([
     		'id'=>$productId,
     		'name'=>$productById->name,

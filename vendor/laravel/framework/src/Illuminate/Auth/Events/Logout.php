@@ -2,6 +2,7 @@
 
 namespace Illuminate\Auth\Events;
 
+use Cart;
 use Illuminate\Queue\SerializesModels;
 
 class Logout

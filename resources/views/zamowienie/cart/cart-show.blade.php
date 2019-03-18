@@ -64,4 +64,6 @@ $total =0;
 
 	</div>
 
+
+  <button href="{{Cart::store(Auth::user())}}" class="btn btn-primary btn-lg"> Dodaj do koszyka</button>
 @stop
