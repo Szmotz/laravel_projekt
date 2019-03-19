@@ -16,8 +16,8 @@ class ZamowienieController extends Controller
 {
    public function index()
    {
-      $zamowienie = Zamowienie::latest()->get();
-         return view('zamowienie.index')->with('zamowienie',$zamowienie);
+      $orders = Zamowienie::latest()->get();
+         return view('zamowienie.index')->with('orders',$orders);
    
     } 
 
@@ -31,26 +31,30 @@ class ZamowienieController extends Controller
 
    public function store($id)
    {
-         $idproduct = Product::findOrFail($id);
+         $idproduct = Product::select('id')->where('id', $id)->get();
+         $test = Zamowienie::all();
+         dd($test->user());
          $iduser = Auth::id();
+
+
          // DB::insert('insert into zamowienie () values (?, ?)', [1, 'Dayle']);
 
       DB::table('zamowienie')->insert(
-    ['product_idproduct' => $idproduct,
-     'user_iduser'=> $iduser,
-     'ilosc'=> '1'
+      ['product_idproduct' => $idproduct[0]->id,
+               'user_iduser'=> $iduser,
+               'ilosc'=> '1'
  ]
 );
-      return view('zamowienie.index');
+      return redirect()->route('zamowienie.index');
    }
 
-   public function edit($id)
-   {
-         $zamowienie = Zamowienie::findOrFail($id);
-       return view('zamowienie.showdb')->with('zamowienie',$zamowienie);
-           //  $zamowienie = DB::table('zamowienie')->get();
-           // return view('zamowienie.showdb')->with('zamowienie',$zamowienie);       
-   }
+   // public function edit($id)
+   // {
+   //       $zamowienie = Zamowienie::findOrFail($id);
+   //     return view('zamowienie.showdb')->with('zamowienie',$zamowienie);
+   //         //  $zamowienie = DB::table('zamowienie')->get();
+   //         // return view('zamowienie.showdb')->with('zamowienie',$zamowienie);       
+   // }
 
 
 

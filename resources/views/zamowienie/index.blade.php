@@ -16,22 +16,19 @@
   </thead>
    
 
-@foreach($zamowienie as $zam)
+@foreach($orders as $order)
         
       
 <tbody>
           <tr>
-<td>{{ $zam->id }}</td>
-<td>{{ $zam->user_iduser }}</td>
-<td>{{$zam->product_idproduct}}</td>
+<td>{{ $order->id }}</td>
+<td>{{ $order->user_iduser }}</td>
+<td>{{ $order }}</td>
 </tr></tbody>
            </table>  
     
 
     @endforeach
-
-
-
 
 
 
