@@ -16,6 +16,9 @@
                     </a> 
                        <a class="btn btn-primary btn-lg" href="{{ action('AdminController@indexDwa') }}">Wszystkie Produkty
                  </a>
+
+                 <a class="btn btn-primary btn-lg" href="{{ action('AdminController@indexTrzy') }}">Wszystkie Zamówienia
+                 </a>
                 @endcan
 </div>
 <div class="row">

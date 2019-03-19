@@ -38,20 +38,20 @@
                     </a>    
                 @endcan
               @cannot('admin-only', Auth::user())
-                 {!! Form::open(['url' => '/cart-add', 'method'=>'POST']) !!}
+   {{--               {!! Form::open(['url' => '/cart-add', 'method'=>'POST']) !!}
    <input type="hidden" name="productId" value="{{ $product->id }}">
    <input type="hidden" name="qty" value="1">
 
   
   <button href="submit" class="btn btn-primary btn-lg"> Dodaj do koszyka</button>
  
-{!! Form::close() !!}
+{!! Form::close() !!} --}}
 
 {{-- nie działa --}}
-               {{--   <a class="btn btn-primary btn-lg" href="{{ action('ZamowienieController@edit', $product->id )}}">
+                 <a class="btn btn-primary btn-lg" href="{{ url('zamowienie', $product->id )}}">
                     Dodaj do koszyka
-                 </a> --}}
-                    
+                 </a>
+                   
                         
                 @endcannot
                 </div>

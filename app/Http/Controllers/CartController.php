@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Zamowienie;
 use Cart;
+use Auth;
 
 class CartController extends Controller
 {
@@ -44,5 +46,14 @@ class CartController extends Controller
     	Cart::remove($rowId);
 
     	return redirect('/cart-show')->with('msg','Produkt pomyślnie usunięty');
+    }
+
+    public function store()
+    {
+
+        Cart::store('default');
+        Cart::destroy();
+        return redirect('/cart-show')->with('msg','Zamównie złożone');
+
     }
 }

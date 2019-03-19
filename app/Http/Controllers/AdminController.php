@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Request;
 use App\User;
+use Cart;
 use App\Product;
 use App\Http\Requests\CreateUserRequest;
 use Illuminate\Support\Facades\DB;
@@ -43,8 +44,10 @@ class AdminController extends Controller
       $user->update($request->all());
       return redirect('adminpages');
    }
-   public function show()
+   public function indexTrzy()
    {
-      
+    return view("adminpages.zamowienia");
+
    }
+
 }

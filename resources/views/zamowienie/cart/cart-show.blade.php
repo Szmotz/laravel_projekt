@@ -65,5 +65,5 @@ $total =0;
 	</div>
 
 
-  <button href="{{Cart::store(Auth::user())}}" class="btn btn-primary btn-lg"> Dodaj do koszyka</button>
+  <button href="{{ action('CartController@store')}}" class="btn btn-primary btn-lg">Dokonaj zakupu</button>
 @stop

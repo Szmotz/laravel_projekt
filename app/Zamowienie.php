@@ -11,6 +11,8 @@ class Zamowienie extends Model
      */
 
     protected $fillable = [
-    	'ilosc'
+    	'user_iduser',
+    	'product_idproduct',
+    	'ilosc',
     ];
 }

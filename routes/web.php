@@ -21,7 +21,10 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/startowa', 'PagesController@about');
 
 Route::get('/show','AdminController@indexDwa');
+Route::get('/zamowienia','AdminController@indexTrzy');
 Route::resource('adminpages','AdminController');
+// Route::get('/showdb','ZamowienieController@ShowDB');
+Route::get('zamowienie/{id}','ZamowienieController@store');
 Route::resource('zamowienie','ZamowienieController');
 Route::resource('products','ProductsController');
 
@@ -29,6 +32,7 @@ Route::resource('products','ProductsController');
 
 Route::post('/cart-add', 'CartController@addToCart');
 Route::get('/cart-show', 'CartController@cartShow');
+Route::get('/cart-show', 'CartController@store');
 Route::post('/update-cart', 'CartController@updateCart');
 Route::get('/delete-cart-product/{rowId}', 'CartController@removeCartProduct');
 
