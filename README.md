@@ -20,13 +20,13 @@ Prosty sklep komputerowy.
 Technologie wykorzystane w projekcie: PHP, framework Laravel 5.4, sqlite3.
 
 ### Strona główna
-[![](docs/images/glowna.png)]
+![](docs/images/glowna.PNG)
 
 ### Widok klienta po zalogowaniu
-[![](docs/images/produkty.png)]
+![](docs/images/produkty.PNG)
 
 ### Składanie zamówień po stronie klienta
-[![](docs/images/dodawanie.png)]
+![](docs/images/dodawanie.PNG)
 
 ### Historia zamówień po stronie klienta
 
@@ -38,7 +38,7 @@ Technologie wykorzystane w projekcie: PHP, framework Laravel 5.4, sqlite3.
 
 
 ### Zarządzanie produktami po stronie administratora
-[![](docs/images/edycja.png)]
+![](docs/images/edycja.PNG)
 
 
 
@@ -92,7 +92,7 @@ zgadzają po udanej rejestracji użytkownik zostanie przekierowany
 do listy produktów. W przeciwnym wypadku otrzyma stosowny komunikat
 jakie dane należy poprawić.
 
-[![](docs/images/img/rejestracja.png)]
+![](docs/images/img/rejestracja.PNG)
 
 
 ## Składanie zamówień
@@ -100,7 +100,7 @@ Klikając przycisk "Dodaj do koszyka" w panelu klienta, zostaniemy przeniesieni
 do widoku z koszykiem oraz listą produktów które zostały wybrane. W tym miejscu można
 wybrać ilość danego produktu, usunąć dany produkt z koszyka czy też przeglądać historię złożonych zamówień.
 
-[![](docs/images/dodawanie.png)]
+![](docs/images/dodawanie.PNG)
 
 Po wszystkim należy nacisnąć przycisk "Złóż zamówienie". Zostaniemy poinformowanie o złożeniu zamówienia. 
 
@@ -110,19 +110,18 @@ Po wszystkim należy nacisnąć przycisk "Złóż zamówienie". Zostaniemy poinf
 Z poziomu panelu administratora mamy możliwość zarządzania produktami,
 użytkownikami, oraz zamówieniami.
 
-
-[![](docs/images/img/zamowienie.png)]
+![](docs/images/img/zamowienie.PNG)
 
 ## Zarządzanie produktami
 W widoku zarządzania produktami administrator ma możliwość dodawania, edycji
 oraz ustawiania widoku produktów. 
 
-[![](docs/images/img/dodawanieproduktu.png)]
+![](docs/images/img/dodawanieproduktu.PNG)
 
 ## Zarządzanie użytkownikami
 W widoku zarządzania użytkownikami administrator może edytować dane użytkownika.
 
-[![](docs/images/img/uzytkownicy.png)]
+![](docs/images/img/uzytkownicy.PNG)
 <!-- jesteś tutaj jesteś tutaj jesteś tutaj jesteś tutaj jesteś tutaj jesteś tutaj jesteś tutaj jesteś tutaj jesteś tutaj jesteś tutaj jesteś tutaj jesteś tutaj jesteś tutaj jesteś tutaj jesteś tutaj jesteś tutaj  -->
 ## Obsługa zamówień
 W widoku obsługi zamówień administrator może zarządzać zamówieniami. Może podejrzeć
