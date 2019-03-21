@@ -31,7 +31,8 @@ Technologie wykorzystane w projekcie: PHP, framework Laravel 5.4, sqlite3.
 ### Historia zamówień po stronie klienta
 
 ### Widok po stronie administratora
-[![](docs/images/admin.png)](https://raw.githubusercontent.com/Szmotz/laravel_projekt/master/docs/images/admin.PNG)
+![czy coś widać](docs/images/admin.png)
+
 
 ### Zarządzanie zamówieniami po stronie administratora
 
