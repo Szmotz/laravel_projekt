@@ -29,12 +29,14 @@ Technologie wykorzystane w projekcie: PHP, framework Laravel 5.4, sqlite3.
 ![](docs/images/dodawanie.PNG)
 
 ### Historia zamówień po stronie klienta
+![](docs/images/img/obsluga.PNG)
 
 ### Widok po stronie administratora
 ![czy coś widać](docs/images/admin.PNG)
 
 
 ### Zarządzanie zamówieniami po stronie administratora
+![](docs/images/dodawanie.PNG)
 
 
 ### Zarządzanie produktami po stronie administratora
@@ -134,7 +136,7 @@ zamówienie, Zamówienie zostało odmówione przez klienta (Np. przy odbiorze),
 Zamówienie jest gotowe i wysłane do klienta ale jeszcze nie dotarło, Zamówienie zostało
 wysłane, a klient je przyjął i za nie zapłacił.
 
-<!-- [![](docs/images/usage/ss10.png)](https://raw.githubusercontent.com/iamkiwi/la_cazzinara/master/docs/images/usage/ss10.png) -->
+![](docs/images/img/obsluga.PNG)
 
 ## License
 
